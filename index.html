@@ -1,116 +1,119 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101820">
-  <meta name="description" content="Ilya Yudenkov — DevOps Engineer. Experience with Kubernetes, infrastructure automation, CI/CD, observability, and Linux systems.">
-  <title>Ilya Yudenkov — DevOps Engineer</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23101820'/%3E%3Cpath d='M11 12h18v4H11zm0 7h18v4H11zm0 7h11v4H11z' fill='%237de2d1'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#111821">
+  <meta name="description" content="Илья Юденков — DevOps-инженер. Инфраструктура, сети, виртуализация, автоматизация, мониторинг, базы данных и внутренние сервисы.">
+  <meta name="author" content="Илья Юденков">
+  <meta name="keywords" content="DevOps, Infrastructure Engineer, Linux, Windows Server, Docker, Kubernetes, Proxmox, QEMU KVM, Ansible, AWX, Semaphore, TeamCity, Harness, networking, VPN, Prometheus, Grafana, Alertmanager, Sentry, MySQL, PostgreSQL, RabbitMQ, Veeam, QA, API testing">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Илья Юденков — DevOps / Infrastructure Engineer">
+  <meta property="og:description" content="Универсальный инженер: инфраструктура, сети, автоматизация, наблюдаемость, данные и QA.">
+  <meta property="profile:first_name" content="Илья">
+  <meta property="profile:last_name" content="Юденков">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Илья Юденков",
+    "jobTitle": "DevOps / Infrastructure Engineer",
+    "email": "mailto:dekart0v1@yandex.com",
+    "telephone": "+7 993 468 1448",
+    "sameAs": ["https://t.me/hagahjahah"],
+    "worksFor": {"@type": "Organization", "name": "Brokeree Solutions"},
+    "knowsAbout": ["DevOps", "Infrastructure operations", "Linux", "Windows Server", "Docker", "Kubernetes", "Virtualization", "Proxmox", "QEMU/KVM", "Networking", "OSI model", "VPN", "OpenVPN", "WireGuard", "Amnezia", "VLESS", "Xray", "XHTTP", "NetBird", "SSH tunneling", "Firewalls", "Nginx", "Certbot", "Let's Encrypt", "Ansible", "AWX", "Semaphore", "CI/CD", "TeamCity", "Harness", "Prometheus", "Grafana", "Alertmanager", "InfluxDB", "Sentry", "MySQL", "PostgreSQL", "RabbitMQ", "Veeam", "Backups", "Database migrations", "Replication", "API testing", "Postman", "Apidog", "Manual QA", "Bash", "PowerShell", "Python", "Windows batch", "MetaTrader 4", "MetaTrader 5"]
+  }
+  </script>
+  <title>Илья Юденков — DevOps / Infrastructure Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23111821'/%3E%3Cpath d='M10 12h20v4H10zm0 7h20v4H10zm0 7h13v4H10z' fill='%237de2d1'/%3E%3C/svg%3E">
   <style>
-    :root { color-scheme: light; --ink:#17232c; --muted:#61717c; --line:#dce5e8; --accent:#087e78; --paper:#fff; --wash:#f2f6f5; }
-    * { box-sizing:border-box }
-    html { scroll-behavior:smooth }
-    body { margin:0; background:var(--wash); color:var(--ink); font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
-    a { color:inherit }
-    .page { width:min(100% - 36px, 1000px); margin:44px auto; background:var(--paper); box-shadow:0 18px 60px #14252c12; }
-    header { padding:56px 64px 42px; color:#f5fbfa; background:#101820; position:relative; overflow:hidden; }
-    header:after { content:""; position:absolute; width:300px;height:300px;border:1px solid #7de2d133;border-radius:50%;right:-115px;top:-180px;box-shadow:0 0 0 32px #7de2d10b,0 0 0 64px #7de2d108; }
-    .eyebrow { margin:0 0 12px; color:#7de2d1; font-size:13px; font-weight:750; letter-spacing:.16em; text-transform:uppercase }
-    h1 { margin:0; font-size:clamp(38px,7vw,64px); line-height:1.04; letter-spacing:-.045em }
-    .role { margin:13px 0 24px; color:#c9d9db; font-size:20px }
-    .contacts { display:flex; flex-wrap:wrap; gap:8px 20px; position:relative; z-index:1; color:#e2eded; font-size:14px }
-    .contacts a { text-decoration-color:#7de2d177; text-underline-offset:3px }
-    main { display:grid; grid-template-columns: minmax(0, 1.65fr) minmax(220px, .85fr); gap:52px; padding:45px 64px 60px }
-    section + section { margin-top:36px }
-    h2 { margin:0 0 17px; color:var(--accent); font-size:13px; letter-spacing:.14em; text-transform:uppercase }
-    p { margin:0; color:#35444d }
-    .job { padding-left:18px; border-left:2px solid var(--line) }
-    .job h3 { margin:0; font-size:19px; line-height:1.35 }
-    .job .meta { margin:5px 0 16px; color:var(--muted); font-size:14px }
-    ul { margin:0; padding-left:19px; color:#35444d }
-    li { padding-left:3px; margin:0 0 9px }
-    li::marker { color:var(--accent) }
-    .skill-list { list-style:none; padding:0 }
-    .skill-list li { margin:0; padding:10px 0; border-bottom:1px solid var(--line); font-size:14px; line-height:1.5 }
-    .skill-list strong { display:block; color:var(--ink); font-size:14px }
-    .education strong { display:block; margin-bottom:4px }
-    .education p, .language-list { font-size:14px }
-    .language-list { list-style:none; padding:0 }
-    .language-list li { margin:0 0 11px }
-    .language-list span { color:var(--muted) }
-    .print { position:fixed; right:22px; bottom:22px; border:0; border-radius:999px; padding:12px 18px; background:var(--accent); color:white; font:inherit; font-weight:700; cursor:pointer; box-shadow:0 5px 20px #10202035 }
-    .print:hover { background:#066b66 }
-    @media(max-width:700px) { .page{width:100%;margin:0;box-shadow:none} header{padding:40px 25px 32px} main{grid-template-columns:1fr;gap:35px;padding:35px 25px 45px} section+section{margin-top:30px}.print{right:14px;bottom:14px} }
-    @media print { body{background:white;font-size:11pt}.page{width:100%;margin:0;box-shadow:none}header{padding:28px 36px;background:#101820!important;print-color-adjust:exact}main{padding:28px 36px;gap:36px}.print{display:none}a{text-decoration:none}.job, section,li{break-inside:avoid} }
+    :root{color-scheme:dark;--bg:#111821;--surface:#18222d;--surface2:#1e2b37;--line:#34414c;--text:#e9f0f2;--muted:#a8b7c0;--mint:#7de2d1;--lime:#b4ed66;--mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+    :root[data-theme="light"]{color-scheme:light;--bg:#edf2f2;--surface:#fff;--surface2:#f6f9f9;--line:#d4dfe1;--text:#17232c;--muted:#586b75;--mint:#087e78;--lime:#087e78}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--mint)}
+    .wrap{width:min(100% - 36px,1120px);margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;padding:21px 0;border-bottom:1px solid var(--line);font:13px var(--mono);color:var(--muted)}.brand{color:var(--mint);letter-spacing:.06em}.actions{display:flex;gap:10px}.button{border:1px solid var(--line);border-radius:5px;padding:8px 13px;background:var(--surface);color:var(--text);font:600 13px inherit;cursor:pointer}.button:hover,.button:focus-visible{border-color:var(--mint);color:var(--mint)}
+    .hero{display:grid;grid-template-columns:1.35fr .65fr;gap:50px;padding:68px 0 48px;align-items:end}.kicker{font:12px var(--mono);color:var(--mint);letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(42px,7vw,78px);letter-spacing:-.06em;line-height:.98;margin:17px 0 15px}.role{font-size:clamp(18px,2.3vw,25px);color:#bacad0;margin:0}.intro{max-width:700px;color:#c5d0d4;margin:25px 0 0}.hero-meta{border-left:1px solid var(--line);padding:4px 0 4px 22px;color:var(--muted);font-size:14px}.hero-meta p{margin:7px 0}.hero-meta b{color:var(--text);font-weight:600}.hero-meta a{text-decoration:none}
+    .signal{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:var(--surface);margin-bottom:55px}.signal div{padding:18px 20px;border-right:1px solid var(--line)}.signal div:last-child{border:0}.signal strong{display:block;font:20px var(--mono);color:var(--lime)}.signal span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+    .section-head{display:flex;align-items:baseline;gap:13px;margin:0 0 20px}.section-head .num{font:12px var(--mono);color:var(--mint)}h2{margin:0;font-size:22px;letter-spacing:-.025em}.section-note{margin-left:auto;color:var(--muted);font:12px var(--mono)}
+    .experience{display:grid;grid-template-columns:230px 1fr;gap:34px;padding:27px 0 45px;border-top:1px solid var(--line)}.experience-aside{color:var(--muted);font-size:14px}.experience-aside strong{display:block;color:var(--text);font-size:18px}.experience-aside .date{display:block;margin-top:8px;color:var(--mint);font:12px var(--mono)}.experience-aside p{margin:12px 0}.experience-content>p{margin:0 0 20px;color:#c6d1d6;max-width:780px}.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.work{border:1px solid var(--line);background:var(--surface);padding:17px 18px;min-height:145px}.work h3{margin:0 0 7px;font-size:15px}.work p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}.tag{font:11px var(--mono);color:#ccece7;background:#7de2d10d;border:1px solid #7de2d129;padding:3px 6px;border-radius:3px}
+    .matrix{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-bottom:54px}.domain{padding:18px;background:var(--surface);border:1px solid var(--line);min-height:145px}.domain .index{color:var(--mint);font:11px var(--mono)}.domain h3{margin:8px 0 7px;font-size:16px}.domain p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+    .toolbelt{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 55px}.toolbelt span{padding:7px 10px;border:1px solid var(--line);background:#151f29;color:#d3dfe2;border-radius:3px;font:12px var(--mono)}
+    .bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;border-top:1px solid var(--line);padding:28px 0 55px}.bottom-grid h2{font-size:17px;margin-bottom:13px}.bottom-grid p,.bottom-grid li{color:var(--muted);font-size:14px}.bottom-grid ul{padding-left:18px;margin:0}.bottom-grid li{padding-left:3px;margin:5px 0}.bottom-grid li::marker{color:var(--mint)}.contact-row{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:18px;font-size:14px}.contact-row a{text-decoration:none}.footer{border-top:1px solid var(--line);padding:16px 0 26px;display:flex;justify-content:space-between;color:#82939e;font:11px var(--mono)}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;gap:24px;padding:48px 0 32px}.hero-meta{display:grid;grid-template-columns:1fr 1fr;gap:3px 14px}.signal{grid-template-columns:1fr 1fr;margin-bottom:40px}.signal div:nth-child(2){border-right:0}.signal div:nth-child(-n+2){border-bottom:1px solid var(--line)}.experience{grid-template-columns:1fr;gap:15px}.experience-aside{display:grid;grid-template-columns:1fr 1fr;gap:5px 12px}.experience-aside p{margin:0}.work-grid{grid-template-columns:1fr}.matrix{grid-template-columns:1fr 1fr}.section-note{display:none}}
+    @media(max-width:470px){.wrap{width:min(100% - 28px,1120px)}.topbar{align-items:flex-start}.brand{max-width:145px}.actions{gap:6px}.button{padding:8px 9px}.matrix{grid-template-columns:1fr}.bottom-grid{grid-template-columns:1fr;gap:22px}.experience-aside{grid-template-columns:1fr}.footer{gap:12px;flex-wrap:wrap}}
+    @media print{ :root{color-scheme:light;--bg:white;--surface:#f2f5f6;--surface2:#edf1f2;--line:#cbd5d9;--text:#17232c;--muted:#52616b;--mint:#087e78;--lime:#087e78}body{background:white;color:#17232c;font-size:10.5pt}.wrap{width:100%;max-width:none}.topbar{padding:8px 0}.actions{display:none}.hero{padding:24px 0 20px;gap:20px}.hero h1{font-size:38pt}.signal{margin-bottom:24px}.signal strong{font-size:15pt}.experience{grid-template-columns:160px 1fr;padding:15px 0 23px;gap:18px}.work-grid{gap:6px}.work{padding:10px;min-height:0}.matrix{gap:6px;margin-bottom:24px}.domain{padding:10px;min-height:0}.toolbelt{margin-bottom:24px}.bottom-grid{padding:16px 0 24px}.tag,.toolbelt span{color:#283b40;background:#f4f7f7}.footer{padding:10px 0}.work,.domain,.experience{break-inside:avoid}a{color:inherit}}
   </style>
 </head>
 <body>
-  <article class="page">
-    <header>
-      <p class="eyebrow">Curriculum vitae</p>
-      <h1>Ilya Yudenkov</h1>
-      <p class="role">DevOps Engineer</p>
-      <div class="contacts">
-        <a href="mailto:dekart0v1@yandex.com">dekart0v1@yandex.com</a>
-        <a href="tel:+79179681448">+7 (917) 968-14-48</a>
-        <a href="https://t.me/hagahjahah">Telegram</a>
-        <span>Moscow / Astana</span>
+  <div class="wrap">
+    <nav class="topbar" aria-label="Site controls">
+      <div class="brand">OPS / PROFILE_01</div>
+      <div class="actions"><button class="button" id="lang" type="button" aria-label="Switch language">EN</button><button class="button" id="theme" type="button" aria-label="Сменить тему" data-i="themeToggle">Светлая тема</button><button class="button" type="button" onclick="window.print()" data-i="print">Сохранить PDF</button></div>
+    </nav>
+    <header class="hero">
+      <div>
+        <div class="kicker" data-i="kicker">Инфраструктура · эксплуатация · автоматизация</div>
+        <h1>Илья<br>Юденков</h1>
+        <p class="role" data-i="role">DevOps / Infrastructure Engineer</p>
+        <p class="intro" data-i="intro">Универсальный инженер в продуктовой компании, выросшей из небольшого стартапа. Беру задачу целиком: разобраться в контексте, выбрать рабочий подход, внедрить и поддерживать. Инфраструктура, сети, автоматизация, данные, QA и внутренние инструменты — подключаюсь там, где команде нужно довести дело до результата.</p>
+      </div>
+      <div class="hero-meta">
+      <p><b data-i="locationLabel">Локация</b><br><span data-i="location">Москва / Астана · удалённо</span></p>
+        <p><b data-i="experienceLabel">Опыт в Brokeree Solutions</b><br><span data-i="experienceValue">Март 2021 — настоящее время</span></p>
+        <p><b data-i="languagesLabel">Языки</b><br><span data-i="languages">Русский · English · Čeština</span></p>
+        <p><b data-i="contactLabel">Контакт</b><br><a href="tel:+79934681448">+7 993 468 1448</a><br><a href="mailto:dekart0v1@yandex.com">dekart0v1@yandex.com</a></p>
       </div>
     </header>
-    <main>
-      <div>
-        <section>
-          <h2>Profile</h2>
-          <p>DevOps Engineer with 3+ years of experience building and supporting infrastructure. Hands-on experience with Kubernetes, Docker, Ansible, CI/CD, monitoring, and database administration.</p>
-        </section>
-        <section>
-          <h2>Experience</h2>
-          <div class="job">
-            <h3>Brokeree Solutions <span style="font-weight:400">· DevOps Engineer</span></h3>
-            <p class="meta">March 2023 – Present · Remote, Saint Petersburg</p>
-            <ul>
-              <li>Operate Kubernetes clusters, including deployment, scaling, and high availability.</li>
-              <li>Automate CI/CD processes using TeamCity and Ansible.</li>
-              <li>Build monitoring and alerting with Prometheus, Grafana, and InfluxDB.</li>
-              <li>Administer MySQL and PostgreSQL, including replication, backups, and performance tuning.</li>
-              <li>Automate infrastructure configuration with Ansible.</li>
-              <li>Configure network security, firewalls, VPNs, and Cloudflare.</li>
-              <li>Manage Linux servers and virtual infrastructure with Proxmox and QEMU/KVM.</li>
-              <li>Work with development and QA teams to support reliable releases.</li>
-            </ul>
+    <section class="signal" aria-label="Experience summary">
+      <div><strong>05+ лет</strong><span data-i="stat1">в инфраструктуре и эксплуатации</span></div>
+      <div><strong>Linux + Windows</strong><span data-i="stat2">серверы, виртуальные среды, рабочие сервисы</span></div>
+      <div><strong>Build → Run</strong><span data-i="stat3">от развёртывания до поддержки и восстановления</span></div>
+      <div><strong>Dev · QA · Ops</strong><span data-i="stat4">связь платформы, тестирования и доставки</span></div>
+    </section>
+    <section>
+      <div class="section-head"><span class="num">01 /</span><h2 data-i="experienceTitle">Опыт работы</h2><span class="section-note" data-i="experienceNote">ЧЕМ ЗАНИМАЛСЯ НА ПРАКТИКЕ</span></div>
+      <div class="experience">
+        <aside class="experience-aside"><strong>Brokeree Solutions</strong><span data-i="title">DevOps Engineer</span><span class="date" data-i="dates">МАРТ 2021 — СЕЙЧАС</span><p data-i="workMode">Удалённая работа</p></aside>
+        <div class="experience-content">
+          <p data-i="workIntro">В небольшой быстро растущей продуктовой компании роль не ограничивается одной узкой зоной. Подключаюсь к разным задачам вокруг продукта: разбираюсь в проблеме, закрываю нужную часть руками и довожу до работающего и поддерживаемого решения вместе с Dev, QA и support.</p>
+          <div class="work-grid">
+            <article class="work"><h3 data-i="w1h">Платформы и виртуализация</h3><p data-i="w1">Развёртывание и поддержка Docker/Kubernetes; виртуальные машины и миграции на Proxmox, QEMU/KVM и Libvirt; администрирование Linux и Windows, включая RDP/RDL и лицензирование.</p><div class="tags"><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Proxmox</span><span class="tag">QEMU/KVM</span><span class="tag">Windows Server</span></div></article>
+            <article class="work"><h3 data-i="w2h">Сети и защищённый доступ</h3><p data-i="w2">Сетевое администрирование с пониманием OSI; VPN и mesh-связность, SSH-туннели, reverse proxy и правила firewall. Выбор и настройка решений под конкретный сценарий доступа.</p><div class="tags"><span class="tag">OpenVPN</span><span class="tag">WireGuard</span><span class="tag">Amnezia</span><span class="tag">VLESS / Xray</span><span class="tag">NetBird</span></div></article>
+            <article class="work"><h3 data-i="w3h">Автоматизация и доставка</h3><p data-i="w3">Автоматизация конфигураций и операций, поддержка CI/CD, сокращение ручных шагов при развёртывании. Скрипты для администрирования и повторяемых задач.</p><div class="tags"><span class="tag">Ansible</span><span class="tag">AWX</span><span class="tag">Semaphore</span><span class="tag">TeamCity</span><span class="tag">Harness</span></div></article>
+            <article class="work"><h3 data-i="w4h">Наблюдаемость и надёжность</h3><p data-i="w4">Мониторинг и алертинг, собственный Sentry, сбор метрик и журналов, усиление конфигураций, резервное копирование, восстановление и работа с инцидентами.</p><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Alertmanager</span><span class="tag">InfluxDB</span><span class="tag">Sentry</span><span class="tag">Veeam</span></div></article>
+            <article class="work"><h3 data-i="w5h">Данные и интеграции</h3><p data-i="w5">Администрирование MySQL/PostgreSQL, миграции, репликация и резервное восстановление; обслуживание RabbitMQ и помощь с массовыми API-операциями.</p><div class="tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">RabbitMQ</span><span class="tag">Migrations</span><span class="tag">Replication</span></div></article>
+            <article class="work"><h3 data-i="w6h">QA и эксплуатация продукта</h3><p data-i="w6">Ручные проверки, воспроизведение дефектов и понятные баг-репорты; тестирование API и взаимодействие с Dev, QA и поддержкой при выпуске изменений.</p><div class="tags"><span class="tag">Postman</span><span class="tag">Apidog</span><span class="tag">Manual QA</span><span class="tag">Bug reports</span></div></article>
           </div>
-        </section>
-        <section class="education">
-          <h2>Education</h2>
-          <p><strong>Brno University of Technology</strong>Information Technologies / Computer Science · 2022</p>
-        </section>
+        </div>
       </div>
-      <aside>
-        <section>
-          <h2>Technical skills</h2>
-          <ul class="skill-list">
-            <li><strong>Containers & orchestration</strong>Kubernetes, Docker</li>
-            <li><strong>Infrastructure as code</strong>Ansible</li>
-            <li><strong>CI/CD</strong>TeamCity, Jenkins, GitOps</li>
-            <li><strong>Observability</strong>Prometheus, Grafana, InfluxDB</li>
-            <li><strong>Databases</strong>MySQL, PostgreSQL</li>
-            <li><strong>Systems</strong>Linux, Proxmox, QEMU/KVM</li>
-            <li><strong>Networking & security</strong>iptables/nftables, WireGuard, OpenVPN, Cloudflare, Nginx</li>
-            <li><strong>Scripting</strong>Bash, Python</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Languages</h2>
-          <ul class="language-list">
-            <li>Russian <span>· Native</span></li>
-            <li>English <span>· C2</span></li>
-            <li>Czech <span>· B2</span></li>
-          </ul>
-        </section>
-      </aside>
-    </main>
-  </article>
-  <button class="print" onclick="window.print()" aria-label="Print or save this CV as a PDF">Save as PDF</button>
+    </section>
+    <section>
+      <div class="section-head"><span class="num">02 /</span><h2 data-i="domainsTitle">Карта компетенций</h2><span class="section-note" data-i="domainsNote">НЕ ПРОСТО СПИСОК ТЕХНОЛОГИЙ</span></div>
+      <div class="matrix">
+        <article class="domain"><span class="index">01 · COMPUTE</span><h3 data-i="d1h">Серверы и хостинг</h3><p data-i="d1">Linux и Windows, Docker, виртуализация, RDP/RDL, сервисы на собственном железе и хостинге.</p></article>
+        <article class="domain"><span class="index">02 · NETWORK</span><h3 data-i="d2h">Сети и доступ</h3><p data-i="d2">OSI, маршрутизация, firewall, VPN, mesh-сети, SSH-туннелирование, DNS и reverse proxy.</p></article>
+        <article class="domain"><span class="index">03 · DELIVERY</span><h3 data-i="d3h">Автоматизация</h3><p data-i="d3">Ansible-плейбуки, AWX/Semaphore, CI/CD, Bash, PowerShell, Python и Windows batch.</p></article>
+        <article class="domain"><span class="index">04 · DATA</span><h3 data-i="d4h">Данные и очереди</h3><p data-i="d4">MySQL, PostgreSQL, миграции, репликация, бэкапы, восстановление, RabbitMQ, InfluxDB.</p></article>
+        <article class="domain"><span class="index">05 · RELIABILITY</span><h3 data-i="d5h">Наблюдаемость и защита</h3><p data-i="d5">Grafana, Prometheus, Alertmanager, Sentry; hardening, firewall-политики и план восстановления.</p></article>
+        <article class="domain"><span class="index">06 · PRODUCT OPS</span><h3 data-i="d6h">Инструменты команд</h3><p data-i="d6">QA-проверки, API, тикеты, коммуникационные боты, CRM, password manager и поддержка продукта.</p></article>
+      </div>
+    </section>
+    <section>
+      <div class="section-head"><span class="num">03 /</span><h2 data-i="toolTitle">Рабочий инструментарий</h2></div>
+      <div class="toolbelt"><span>Docker</span><span>Kubernetes</span><span>Proxmox</span><span>QEMU/KVM</span><span>Libvirt</span><span>Ansible</span><span>AWX</span><span>Semaphore</span><span>TeamCity</span><span>Harness</span><span>Nginx</span><span>Certbot</span><span>Let's Encrypt</span><span>Prometheus</span><span>Grafana</span><span>Alertmanager</span><span>InfluxDB</span><span>Sentry</span><span>Veeam</span><span>MySQL</span><span>PostgreSQL</span><span>RabbitMQ</span><span>Postman</span><span>Apidog</span><span>PowerShell</span><span>Bash</span><span>Python</span><span>Windows Server</span><span>OpenVPN</span><span>WireGuard</span><span>Amnezia</span><span>VLESS / Xray / XHTTP</span><span>NetBird</span><span>SSH tunneling</span><span>iptables / nftables</span><span>fail2ban</span><span>Cloudflare</span></div>
+    </section>
+    <section class="bottom-grid">
+      <div><h2 data-i="productTitle">Продуктовый контекст</h2><p data-i="product">Brokeree Solutions выросла из небольшого стартапа в зрелую продуктовую компанию с высокими требованиями к надёжности и масштабу. Моя ценность — широкий практический охват и готовность брать задачи за пределами одной привычной специализации: от инфраструктурного слоя до тестирования, интеграций и рабочих процессов команд. Знаком с MetaTrader 4/5 и инструментами командной работы и поддержки.</p><div class="toolbelt" style="margin:14px 0 0"><span>MetaTrader 4/5</span><span>Jira</span><span>ClickUp</span><span>Freshdesk</span><span>HubSpot</span></div></div>
+      <div><h2 data-i="educationTitle">Образование и контакты</h2><p><b style="color:var(--text)">Brno University of Technology</b><br><span data-i="education">Информационные технологии / Computer Science · 2022</span></p><div class="contact-row"><a href="tel:+79934681448">+7 993 468 1448</a><a href="mailto:dekart0v1@yandex.com">Email</a><a href="https://t.me/hagahjahah">Telegram</a></div><p style="margin-top:13px;font-size:12px" data-i="privacy">Перед публикацией проверь, что контакты и точные формулировки комфортно оставить открытыми.</p></div>
+    </section>
+    <footer class="footer"><span>ILYА YUDENKOV · INFRA / DEVOPS</span><span data-i="footer">Практический опыт · март 2021 — настоящее время</span></footer>
+  </div>
+  <script>
+    const copy={
+      ru:{print:'Сохранить PDF',themeToggle:'Светлая тема',kicker:'Инфраструктура · эксплуатация · автоматизация',role:'DevOps / Infrastructure Engineer',intro:'Универсальный инженер в продуктовой компании, выросшей из небольшого стартапа. Беру задачу целиком: разобраться в контексте, выбрать рабочий подход, внедрить и поддерживать. Инфраструктура, сети, автоматизация, данные, QA и внутренние инструменты — подключаюсь там, где команде нужно довести дело до результата.',locationLabel:'Локация',location:'Москва / Астана · удалённо',experienceLabel:'Опыт в Brokeree Solutions',experienceValue:'Март 2021 — настоящее время',languagesLabel:'Языки',languages:'Русский · English · Čeština',contactLabel:'Контакт',stat1:'в инфраструктуре и эксплуатации',stat2:'серверы, виртуальные среды, рабочие сервисы',stat3:'от развёртывания до поддержки и восстановления',stat4:'связь платформы, тестирования и доставки',experienceTitle:'Опыт работы',experienceNote:'ЧЕМ ЗАНИМАЛСЯ НА ПРАКТИКЕ',title:'DevOps Engineer',dates:'МАРТ 2021 — СЕЙЧАС',workMode:'Удалённая работа',workIntro:'В небольшой быстро растущей продуктовой компании роль не ограничивается одной узкой зоной. Подключаюсь к разным задачам вокруг продукта: разбираюсь в проблеме, закрываю нужную часть руками и довожу до работающего и поддерживаемого решения вместе с Dev, QA и support.',w1h:'Платформы и виртуализация',w1:'Развёртывание и поддержка Docker/Kubernetes; виртуальные машины и миграции на Proxmox, QEMU/KVM и Libvirt; администрирование Linux и Windows, включая RDP/RDL и лицензирование.',w2h:'Сети и защищённый доступ',w2:'Сетевое администрирование с пониманием OSI; VPN и mesh-связность, SSH-туннели, reverse proxy и правила firewall. Выбор и настройка решений под конкретный сценарий доступа.',w3h:'Автоматизация и доставка',w3:'Автоматизация конфигураций и операций, поддержка CI/CD, сокращение ручных шагов при развёртывании. Скрипты для администрирования и повторяемых задач.',w4h:'Наблюдаемость и надёжность',w4:'Мониторинг и алертинг, собственный Sentry, сбор метрик и журналов, усиление конфигураций, резервное копирование, восстановление и работа с инцидентами.',w5h:'Данные и интеграции',w5:'Администрирование MySQL/PostgreSQL, миграции, репликация и резервное восстановление; обслуживание RabbitMQ и помощь с массовыми API-операциями.',w6h:'QA и эксплуатация продукта',w6:'Ручные проверки, воспроизведение дефектов и понятные баг-репорты; тестирование API и взаимодействие с Dev, QA и поддержкой при выпуске изменений.',domainsTitle:'Карта компетенций',domainsNote:'НЕ ПРОСТО СПИСОК ТЕХНОЛОГИЙ',d1h:'Серверы и хостинг',d1:'Linux и Windows, Docker, виртуализация, RDP/RDL, сервисы на собственном железе и хостинге.',d2h:'Сети и доступ',d2:'OSI, маршрутизация, firewall, VPN, mesh-сети, SSH-туннелирование, DNS и reverse proxy.',d3h:'Автоматизация',d3:'Ansible-плейбуки, AWX/Semaphore, CI/CD, Bash, PowerShell, Python и Windows batch.',d4h:'Данные и очереди',d4:'MySQL, PostgreSQL, миграции, репликация, бэкапы, восстановление, RabbitMQ, InfluxDB.',d5h:'Наблюдаемость и защита',d5:'Grafana, Prometheus, Alertmanager, Sentry; hardening, firewall-политики и план восстановления.',d6h:'Инструменты команд',d6:'QA-проверки, API, тикеты, коммуникационные боты, CRM, password manager и поддержка продукта.',toolTitle:'Рабочий инструментарий',productTitle:'Продуктовый контекст',product:'Brokeree Solutions выросла из небольшого стартапа в зрелую продуктовую компанию с высокими требованиями к надёжности и масштабу. Моя ценность — широкий практический охват и готовность брать задачи за пределами одной привычной специализации: от инфраструктурного слоя до тестирования, интеграций и рабочих процессов команд. Знаком с MetaTrader 4/5 и инструментами командной работы и поддержки.',educationTitle:'Образование и контакты',education:'Информационные технологии / Computer Science · 2022',privacy:'Перед публикацией проверь, что контакты и точные формулировки комфортно оставить открытыми.',footer:'Практический опыт · март 2021 — настоящее время'},
+      en:{print:'Save as PDF',themeToggle:'Light theme',kicker:'Infrastructure · operations · automation',role:'DevOps / Infrastructure Engineer',intro:'A versatile engineer at a product company that grew from a small startup. I take work end to end: understand the context, choose a practical approach, implement it, and keep it running. Infrastructure, networks, automation, data, QA, and internal tools — I step in wherever the team needs work carried through to a result.',locationLabel:'Location',location:'Moscow / Astana · remote',experienceLabel:'At Brokeree Solutions',experienceValue:'March 2021 — Present',languagesLabel:'Languages',languages:'Russian · English · Czech',contactLabel:'Contact',stat1:'in infrastructure and operations',stat2:'servers, virtual platforms, production services',stat3:'from deployment through support and recovery',stat4:'connecting platform, QA, and delivery',experienceTitle:'Experience',experienceNote:'HANDS-ON SCOPE',title:'DevOps Engineer',dates:'MAR 2021 — PRESENT',workMode:'Remote',workIntro:'At a fast-growing product company, the role spans more than one narrow specialty. I take on varied product-adjacent work: understand the problem, handle the implementation, and deliver a working, supportable solution with Dev, QA, and support.',w1h:'Platforms & virtualization',w1:'Deploy and support Docker/Kubernetes; manage virtual machines and migrations on Proxmox, QEMU/KVM, and Libvirt; administer Linux and Windows, including RDP/RDL and licensing.',w2h:'Networks & secure access',w2:'Network administration grounded in the OSI model; VPN and mesh connectivity, SSH tunnels, reverse proxies, and firewall rules. Select and configure solutions for specific access needs.',w3h:'Automation & delivery',w3:'Automate configuration and operations, support CI/CD, and reduce manual deployment steps. Write scripts for administration and repeatable tasks.',w4h:'Observability & reliability',w4:'Monitoring and alerting, self-hosted Sentry, metrics and logs, system hardening, backup and recovery, and incident troubleshooting.',w5h:'Data & integrations',w5:'Administer MySQL/PostgreSQL, migrations, replication, and backup recovery; operate RabbitMQ and support bulk API operations.',w6h:'QA & product operations',w6:'Run manual checks, reproduce defects, and write clear bug reports; test APIs and coordinate with Dev, QA, and support during releases.',domainsTitle:'Competency map',domainsNote:'CAPABILITIES, NOT A BUZZWORD DUMP',d1h:'Servers & hosting',d1:'Linux and Windows, Docker, virtualization, RDP/RDL, services on owned hardware and hosted infrastructure.',d2h:'Networks & access',d2:'OSI, routing, firewalls, VPN, mesh networks, SSH tunneling, DNS, and reverse proxies.',d3h:'Automation',d3:'Ansible playbooks, AWX/Semaphore, CI/CD, Bash, PowerShell, Python, and Windows batch.',d4h:'Data & messaging',d4:'MySQL, PostgreSQL, migrations, replication, backup and recovery, RabbitMQ, and InfluxDB.',d5h:'Observability & security',d5:'Grafana, Prometheus, Alertmanager, Sentry; hardening, firewall policies, and recovery planning.',d6h:'Team tooling',d6:'QA checks, APIs, ticketing, communication bots, CRM, password management, and product support.',toolTitle:'Tools I work with',productTitle:'Product context',product:'Brokeree Solutions grew from a small startup into a mature product company with high demands on reliability and scale. My value is broad hands-on range and willingness to own work beyond one familiar specialty: from infrastructure through testing, integrations, and team workflows. Also familiar with MetaTrader 4/5 and collaboration and support tools.',educationTitle:'Education & contact',education:'Information Technology / Computer Science · 2022',privacy:'Before publishing, confirm you are comfortable making the contact details and wording public.',footer:'Hands-on experience · March 2021 — Present'}
+    };
+    let current='ru';const button=document.getElementById('lang');const themeButton=document.getElementById('theme');function setLanguage(lang){current=lang;document.documentElement.lang=lang;document.querySelectorAll('[data-i]').forEach(el=>{const key=el.dataset.i;if(copy[lang][key])el.textContent=copy[lang][key]});button.textContent=lang==='ru'?'EN':'RU';button.setAttribute('aria-label',lang==='ru'?'Switch to English':'Переключить на русский');themeButton.setAttribute('aria-label',lang==='ru'?'Сменить тему':'Toggle color theme');document.title=lang==='ru'?'Илья Юденков — DevOps / Infrastructure Engineer':'Ilya Yudenkov — DevOps / Infrastructure Engineer'}button.addEventListener('click',()=>setLanguage(current==='ru'?'en':'ru'));themeButton.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='light'?'dark':'light';document.documentElement.dataset.theme=next;themeButton.textContent=current==='ru'?(next==='light'?'Тёмная тема':'Светлая тема'):(next==='light'?'Dark theme':'Light theme');try{localStorage.setItem('cv-theme',next)}catch(e){}});try{const saved=localStorage.getItem('cv-theme');if(saved==='light')document.documentElement.dataset.theme='light'}catch(e){}setLanguage('ru');if(document.documentElement.dataset.theme==='light')themeButton.textContent='Тёмная тема';
+  </script>
 </body>
 </html>
