@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Public CV page; no private paths are intended to be hosted here.
